@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "belgium-open-data": {
+      "type": "http",
+      "url": "https://data.vecture.be/mcp"
+    }
+  }
+}
