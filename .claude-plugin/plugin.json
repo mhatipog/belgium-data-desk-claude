@@ -1,7 +1,7 @@
 {
   "name": "belgium-data-desk",
   "displayName": "Belgium Data Desk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find, check and preview Belgian open data from Statbel, the KBO enterprise register, regional agencies and cities, in Dutch, French or English, with the official source, licence and pitfalls for each answer.",
   "author": {
     "name": "Vecture",
@@ -9,6 +9,7 @@
     "url": "https://vecture.be"
   },
   "homepage": "https://data.vecture.be/connect/",
+  "privacyPolicyUrl": "https://data.vecture.be/privacy",
   "license": "MIT",
   "keywords": ["belgium", "open-data", "statbel", "kbo", "statistics", "government-data", "flanders", "wallonia", "brussels"]
 }
