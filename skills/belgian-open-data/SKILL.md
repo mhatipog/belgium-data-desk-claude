@@ -16,6 +16,17 @@ Belgian public data is split across federal, regional, community and local publi
 
 The connector describes catalogue metadata, link checks and file samples. It does not certify that the numbers in a dataset are correct, and it cannot compute totals over whole files.
 
+## Subsurface questions in Flanders
+
+For soil, geology, boreholes, groundwater or "what is under this address" in the Flemish Region, call `subsurface_at_location` with the address (or latitude/longitude). It reads Databank Ondergrond Vlaanderen (DOV) live. Then call `get_subsurface_record` with an id it returned: a borehole (`boring/…`) for its layers, a groundwater screen (`filter/…`) for water levels, a CPT (`sondering/…`) for cone resistance.
+
+- Map units (soil map, geological maps) are map-scale information and can be wrong for a single parcel; say so when a user plans works. Boreholes are point observations: give the distance from the address.
+- Borehole depths are metres below ground at the borehole; groundwater levels are in m TAW (height above the Belgian datum). A depth below ground needs the ground level, which the record gives.
+- Old borehole logs are as written at the time, often in French; translate them and keep the original wording for key terms.
+- The groundwater status is the nearest status well's latest level classed against that well's own history, which may be kilometres away; it describes the regional shallow groundwater, not the user's parcel.
+- DOV covers the Flemish Region only. Brussels and Wallonia have their own geological services.
+- Cite DOV with the `provenance.citation` text; DOV data may be reused for any purpose with that attribution. These tools do not replace a geotechnical study or permits (a geothermal borehole or a well needs the usual permit or notification).
+
 ## Who publishes what
 
 - **Federal statistics:** Statbel (population, households, prices and the consumer price index, road accidents, census, enterprises by sector). The National Bank of Belgium publishes company annual accounts and economic statistics.
