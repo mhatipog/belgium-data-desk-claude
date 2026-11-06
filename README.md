@@ -7,7 +7,7 @@ Find, check and preview Belgian open data from inside Claude. The plugin connect
 - **Multilingual search** in Dutch, French or English. For common needs (population, enterprise numbers, air quality, unemployment, train punctuality, elections and more) the official reference source comes first, with who publishes it and the usual pitfalls.
 - **Evidence per dataset:** publisher, licence and what it allows, update cycle, contact point, declared columns and whether the download link worked when last checked.
 - **File preview:** column names, inferred types, delimiter, encoding and sample rows read from the first 64 KiB of a dataset's CSV or TSV file.
-- **Subsurface of Flanders, live:** for an address or point, the soil-map unit, geological map units, groundwater bodies and drinking-water protection zone, plus nearby boreholes, cone penetration tests and groundwater wells; then layer-by-layer borehole logs, CPT profiles and groundwater levels. Read at question time from Databank Ondergrond Vlaanderen (DOV), with the citation DOV asks for.
+- **Subsurface of Flanders, live:** for an address or point, the soil-map unit, geological map units, groundwater bodies and drinking-water protection zone, the modelled column of geological and aquifer units from DOV's 3D models, plus nearby boreholes, cone penetration tests and groundwater wells; then layer-by-layer borehole logs, CPT profiles with soil behaviour type, groundwater levels and groundwater quality (nitrate and more). Read at question time from Databank Ondergrond Vlaanderen (DOV), with the citation DOV asks for.
 - **A skill** (`belgian-open-data`) that tells Claude how to choose sources, join on REFNIS codes, read semicolon/decimal-comma files and report licences.
 
 ## Example prompts

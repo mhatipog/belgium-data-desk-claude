@@ -1,7 +1,7 @@
 {
   "name": "belgium-data-desk",
   "displayName": "Belgium Data Desk",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Find, check and preview Belgian open data from Statbel, the KBO enterprise register, regional agencies and cities, in Dutch, French or English, with the official source, licence and pitfalls for each answer. Ask what is under an address in Flanders: soil, geology, boreholes and groundwater, live from Databank Ondergrond Vlaanderen.",
   "author": {
     "name": "Vecture",
