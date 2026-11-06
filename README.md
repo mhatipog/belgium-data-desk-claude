@@ -8,6 +8,7 @@ Find, check and preview Belgian open data from inside Claude. The plugin connect
 - **Evidence per dataset:** publisher, licence and what it allows, update cycle, contact point, declared columns and whether the download link worked when last checked.
 - **File preview:** column names, inferred types, delimiter, encoding and sample rows read from the first 64 KiB of a dataset's CSV or TSV file.
 - **Subsurface of Flanders, live:** for an address or point, the soil-map unit, geological map units, groundwater bodies and drinking-water protection zone, the modelled column of geological and aquifer units from DOV's 3D models, plus nearby boreholes, cone penetration tests and groundwater wells; groundwater abstraction permits and soil profiles nearby; then layer-by-layer borehole logs, CPT profiles with soil behaviour type, groundwater levels and quality (nitrate and more) and soil profiles per horizon. Search by municipality, depth, purpose, aquifer or date ("the deepest boreholes in Mol", "the largest groundwater permits in Leuven"). Each answer starts with key facts. Read at question time from Databank Ondergrond Vlaanderen (DOV), with the citation DOV asks for.
+- **Answers, not just datasets:** official Statbel population, income, inflation and unemployment figures for any municipality, province or region (with rankings and comparisons); air quality now, forecast and as an annual mean at any Belgian address (IRCEL-CELINE); flood-prone classes at an address in Flanders (VMM's official maps).
 - **A skill** (`belgian-open-data`) that tells Claude how to choose sources, join on REFNIS codes, read semicolon/decimal-comma files and report licences.
 
 ## Example prompts
@@ -20,7 +21,7 @@ Find, check and preview Belgian open data from inside Claude. The plugin connect
 
 ## What it connects to and what it sends
 
-The plugin declares one remote MCP server, `https://data.vecture.be/mcp`, operated by Vecture. It needs no account or API key. When Claude calls a tool, the server receives only the tool arguments: search words, a dataset id, a row count, or for subsurface questions an address, municipality, coordinates, search filters or a DOV record id. For a file preview the server reads the start of that dataset's public file from the publisher listed in the catalogue; for subsurface questions it sends the address to the Flemish Government's geolocation service and coordinates or record ids to DOV. It never fetches a web address supplied by the caller. All tools are read-only. The plugin runs no local code, hooks or scripts.
+The plugin declares one remote MCP server, `https://data.vecture.be/mcp`, operated by Vecture. It needs no account or API key. When Claude calls a tool, the server receives only the tool arguments: search words, a dataset id, a row count, or for the answer tools an address, municipality, coordinates, place names, search filters or a DOV record id. For a file preview the server reads the start of that dataset's public file from the publisher listed in the catalogue; for subsurface questions it sends the address to the Flemish Government's geolocation service and coordinates or record ids to DOV. It never fetches a web address supplied by the caller. All tools are read-only. The plugin runs no local code, hooks or scripts.
 
 ## Privacy
 

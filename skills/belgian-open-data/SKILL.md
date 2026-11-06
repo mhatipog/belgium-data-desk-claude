@@ -16,6 +16,14 @@ Belgian public data is split across federal, regional, community and local publi
 
 The connector describes catalogue metadata, link checks and file samples. It does not certify that the numbers in a dataset are correct, and it cannot compute totals over whole files.
 
+## Answer tools: statistics, air quality, flood risk
+
+- For a number (population, income, inflation, unemployment), call `belgian_statistics` rather than searching for a dataset. Quote the reference date it gives (population on 1 January; income for the income year; inflation for the month). Average net taxable income is not disposable income and is not inflation-adjusted; the source has no median.
+- Ambiguous names are resolved with a note (a bare "Brussels" is the region; "Limburg" is the province, not the Walloon municipality Limbourg). Read the note and say which place the figure is for.
+- For air quality, `air_quality` gives this hour's modelled values, the BelAQI forecast and the annual mean. Compare only the annual mean with the WHO and EU annual values; an hourly value says nothing about a yearly limit.
+- For flood risk in Flanders, `flood_risk` gives VMM's classes A–D for rivers, rain and the sea. It describes the location, not the building; the official parcel and building scores (P- and G-score) are on waterinfo.vlaanderen.be.
+- Every location answer includes the municipality with its NIS code: use it to join with `belgian_statistics`.
+
 ## Subsurface questions in Flanders
 
 For soil, geology, boreholes, groundwater or "what is under this address" in the Flemish Region, call `subsurface_at_location` with the address (or latitude/longitude). It reads Databank Ondergrond Vlaanderen (DOV) live. Then call `get_subsurface_record` with an id it returned: a borehole (`boring/…`) for its layers, a groundwater screen (`filter/…`) for water levels, a CPT (`sondering/…`) for cone resistance.
